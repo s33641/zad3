@@ -1,17 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
+public class Main {
+    public static void main(String[] args) {
+        Student student1 = new Student();
+        student1.addgrade(5);
+        student1.addgrade(3.5);
+        student1.addgrade(2.5);
+        System.out.println(student1.srednia());
 
-public class studentgroup {
-    public String nazwa;
-    public List <String> sklad = new ArrayList<String>();
-
-    public void addtogroup (String index){
-        if(sklad.size()>15){
-            throw new RuntimeException("max liczba studentow w grupie to 15");
-        }
-        if(sklad.contains(index)){
-            throw new RuntimeException("ten student juz jest w grupie");
-        }
-        sklad.add(index);
+        studentgroup grupa1 = new studentgroup();
+        grupa1.addtogroup("s1");
+        grupa1.addtogroup("s2");
+        grupa1.addtogroup("s3");
+        System.out.println(grupa1.sklad);
     }
 }
